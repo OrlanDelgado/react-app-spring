@@ -18,12 +18,8 @@
   "Environment": [
     {
       "Name": "REACT_APP_API_URL",
-      "Value": "https://ec66-146-70-202-5.ngrok-free.app/api"
+      "Value": "https://ec66-146-70-202-5.ngrok-free.app"
     }
   ],
-  "Entrypoint": "sh",
-  "Command": [
-    "-c",
-    "npm install && npm run build && npx serve -s build"
-  ]
+  "Entrypoint": "sh -c \"npm install && npm run build && npx serve -s build\""
 }
