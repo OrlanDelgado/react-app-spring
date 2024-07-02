@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/OrlanDelgado/react-app-spring/static/css/main.e6c13ad2.css",
+    "main.js": "/OrlanDelgado/react-app-spring/static/js/main.95b5aea8.js",
+    "index.html": "/OrlanDelgado/react-app-spring/index.html",
+    "main.e6c13ad2.css.map": "/OrlanDelgado/react-app-spring/static/css/main.e6c13ad2.css.map",
+    "main.95b5aea8.js.map": "/OrlanDelgado/react-app-spring/static/js/main.95b5aea8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.95b5aea8.js"
+  ]
+}
