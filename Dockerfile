@@ -1,26 +1,21 @@
-# Usa una imagen base de Node
-FROM node:14
+# Usa la imagen base de Node.js versión LTS
+FROM node:lts-alpine
 
-# Establece el directorio de trabajo en el contenedor
-WORKDIR /usr/src/app
+# Establece el directorio de trabajo dentro del contenedor
+WORKDIR /app
 
-# Copia los archivos package.json y package-lock.json al directorio de trabajo
-COPY package*.json ./
+# Copia los archivos de la aplicación y las dependencias
+COPY package.json package-lock.json ./
+RUN npm install --production
 
-# Instala las dependencias del proyecto
-RUN npm install
-
-# Copia el resto de los archivos de la aplicación al directorio de trabajo
+# Copia el resto de la aplicación
 COPY . .
 
-# Construye la aplicación para producción
+# Compila la aplicación de React
 RUN npm run build
 
-# Instala el servidor estático 'serve'
-RUN npm install -g serve
-
-# Expone el puerto que utilizará la aplicación
+# Expone el puerto 3000 para que la aplicación pueda ser accedida
 EXPOSE 3000
 
-# Comando para ejecutar la aplicación
-CMD ["serve", "-s", "build"]
+# Comando para iniciar la aplicación
+CMD ["npm", "start"]
